@@ -1,0 +1,6 @@
+E:\DotNet\dotnetPracticals\Inheritance\bin\Debug\Inheritance.exe.config
+E:\DotNet\dotnetPracticals\Inheritance\bin\Debug\Inheritance.exe
+E:\DotNet\dotnetPracticals\Inheritance\bin\Debug\Inheritance.pdb
+E:\DotNet\dotnetPracticals\Inheritance\obj\Debug\Inheritance.csprojAssemblyReference.cache
+E:\DotNet\dotnetPracticals\Inheritance\obj\Debug\Inheritance.exe
+E:\DotNet\dotnetPracticals\Inheritance\obj\Debug\Inheritance.pdb

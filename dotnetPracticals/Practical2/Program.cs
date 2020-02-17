@@ -24,7 +24,8 @@ namespace Practical2
             } while (!(Regex.IsMatch(country, "^[a-zA-Z]+$")));
 
             Console.WriteLine();
-            Console.WriteLine("Hi " + name + " from country " + country);
+            Console.WriteLine($"Hello {name} from {country}");
+            Console.ReadKey();
         }
     }
 }
