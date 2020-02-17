@@ -10,9 +10,13 @@ namespace Practical4
     {
         static void Main(string[] args)
         {
-            String infix = "a+b";
+            InfixClass myclass = new InfixClass();
+            String infix = "a+b*(c-d)";
             String postfix;
-            infixtoPostfix(ref infix, out postfix);
+            myclass.Infixtopostfix(ref infix, out postfix);
+            Console.WriteLine("infix string : " + infix);
+            Console.WriteLine("postfix string is : " + postfix);
+            Console.Read();
         }
     }
 }

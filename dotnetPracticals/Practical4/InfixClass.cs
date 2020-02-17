@@ -1,94 +1,92 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Practical4
 {
     class InfixClass
     {
-        public void infixToPostfix(String Infix, String Postfix)
+        public void Infixtopostfix(ref string infix, out string postfix)
         {
-            Postfix = "";
+            postfix = "";
             char ch;
-            Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < Infix.Length; i++)
+            Stack<char> s = new Stack<char>();
+            for (int i = 0; i < infix.Length; i++)
             {
-                ch = Infix[i];
-                if (isOperator(ch))
+                ch = infix[i];
+
+                if (isoperator(ch))
                 {
-                    if (stack.Count == 0)
+                    if (s.Count() == 0)
                     {
-                        stack.Push(ch);
+                        s.Push(ch);
                     }
                     else
                     {
                         if (ch == '(')
                         {
-                            stack.Push(ch);
+                            s.Push(ch);
+                        }
+                        else if (ch == ')')
+                        {
+                            while (s.Peek() != '(')
+                            {
+                                postfix += s.Pop();
+                            }
+                            s.Pop();
                         }
                         else
                         {
-                            if (ch == ')')
+                            if (priority(ch) > priority(s.Peek()))
                             {
-                                while (stack.Peek() != ')')
-                                {
-                                    Postfix += stack.Pop();
-                                }
-                                stack.Pop();
+                                s.Push(ch);
                             }
                             else
                             {
-                                if (Priority(ch) > Priority(stack.Peek()))
-                                {
-                                    
-                                }
+                                postfix += s.Pop();
+                                i--;
                             }
-
                         }
                     }
-
                 }
                 else
                 {
-                    Postfix += ch;
+                    postfix += ch;
                 }
-
             }
+            foreach (var item in s)
+            {
+                postfix += item;
+            }
+
         }
 
-        public bool isOperator(char ch)
-        {
-            if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '(' || ch == ')' || ch == '%')
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public int Priority(char ch)
+        public int priority(char ch)
         {
             switch (ch)
             {
-                case '(' : 
+                case '(':
                     return 0;
-                    break;
                 case '+':
                 case '-':
                     return 1;
-                    break;
-                case '%':
-                case '/':
                 case '*':
+                case '/':
+                case '%':
                     return 2;
-                    break;
+                default:
+                    return -1;
             }
-            return ch;
         }
-    }
 
+        public bool isoperator(char ch)
+        {
+            if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '%' || ch == '(' || ch == ')')
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+    }
 }
