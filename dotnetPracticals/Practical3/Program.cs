@@ -19,14 +19,14 @@ namespace Practical3
                 i++;
                 binaryValue = binaryValue / 10;
             }
-            string Result = $"Binary: {Binary} is converted to Decimal: {Decimal}";
+            string Result = $"Binary : {Binary} is converted to Decimal: {Decimal}";
             return Result;
         }
 
 
         public static string DecimalToBinary(int decimalValue)
         {
-            string Result = $"Decimal: {decimalValue} is converted to Binary: ";
+            string Result = $"Decimal : {decimalValue} is converted to Binary: ";
             int value = decimalValue; int i;
             int[] binaryString = new int[10];
             for (i = 0; value > 0; i++)
@@ -44,7 +44,7 @@ namespace Practical3
 
         public static string DecimalToOctal(int decimalValue)
         {
-            string Result = $"Decimal: {decimalValue} is converted to Octal: ";
+            string Result = $"Decimal : {decimalValue} is converted to Octal: ";
             int value = decimalValue; int i;
             int[] octalString = new int[10];
             for (i = 0; value > 0; i++)
@@ -62,8 +62,8 @@ namespace Practical3
 
 
         public static string DecimalToHexadecimal(int decimalValue)
-        {
-            string Result = $"Decimal: {decimalValue} is converted to Hexadecimal: ";
+        { 
+            string Result = $"Decimal : {decimalValue} is converted to Hexadecimal: ";
             int value = decimalValue; int i;
             int[] hexadecimalString = new int[10];
             for (i = 0; value > 0; i++)

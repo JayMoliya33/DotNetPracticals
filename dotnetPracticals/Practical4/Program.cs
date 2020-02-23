@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Practical4
 {
-    class Program
+    class Practical4
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             InfixClass myclass = new InfixClass();
-            String infix = "a+b*(c-d)";
+            String infix = " a+b*c-d";
             String postfix;
             myclass.Infixtopostfix(ref infix, out postfix);
             Console.WriteLine("infix string : " + infix);

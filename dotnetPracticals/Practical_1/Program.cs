@@ -14,15 +14,7 @@ namespace Practical_1
             pattern2(); //This is a Pattern_2
             Console.WriteLine();
             pattern3(); //This is a Pattern_3
-            Console.WriteLine();
-
-           
-int x = 42; int y = 12; int w;
-            object o;
-            o = x;
-            w = y * (int)o;
-            Console.WriteLine(w); 
-
+            Console.WriteLine();           
             Console.Read();
         }
         static void pattern1()
