@@ -13,8 +13,8 @@ namespace Practical_5
             String number, result;
             Console.Write("Please enter the number : ");
             number = Console.ReadLine();
-            result = ConvertWholeNumber(number);
-            Console.Write("\nNumber in words : ");
+            result = ConvertoNumber(number);
+            Console.Write("\n Number in words : ");
             Console.WriteLine(result);
             Console.Read();
         }
@@ -125,14 +125,14 @@ namespace Practical_5
             }
             return name;
         }
-        public static String ConvertWholeNumber(String Number)
+        public static String ConvertoNumber(String Number)
         {
             string word = "";
             try
             {
                 bool isDone = false;//test if already translated    
-                int dblAmt = Convert.ToInt32(Number);
-                if (dblAmt > 0)
+                int n = Convert.ToInt32(Number);
+                if (n > 0)
                 {
                     int numDigits = Number.Length;
                     int pos = 0;   //store digit grouping    
@@ -182,14 +182,14 @@ namespace Practical_5
                         {
                             try
                             {
-                                word = ConvertWholeNumber(Number.Substring(0, pos)) + place + ConvertWholeNumber(Number.Substring(pos));
+                                word = ConvertoNumber(Number.Substring(0, pos)) + place + ConvertoNumber(Number.Substring(pos));
                             }
                             catch
                             { }
                         }
                         else
                         {
-                            word = ConvertWholeNumber(Number.Substring(0, pos)) + ConvertWholeNumber(Number.Substring(pos));
+                            word = ConvertoNumber(Number.Substring(0, pos)) + ConvertoNumber(Number.Substring(pos));
                         }
                     }
                 }
