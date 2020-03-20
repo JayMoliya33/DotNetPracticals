@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Practical 5
+ * Write a C# code to convert digits to words 
+ */
+
+using System;
 
 namespace Practical_5
 {
@@ -33,7 +33,7 @@ namespace Practical_5
                     name = "Two";
                     break;
                 case 3:
-                    name = "Three";
+                    name = "Three"; 
                     break;
                 case 4:
                     name = "Four";

@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/* Practical 1 :
+  C# program to print Different pattern.
+  */
+
+using System;
+
 
 namespace Practical_1
 {

@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/* Practical 2
+ * Write C# code to prompt a user to input his/her name and country name 
+ * and then the output will be shown as an example below: 
+ * Hello Ram from country India!
+ */
+using System;
 using System.Text.RegularExpressions;
 
 namespace Practical2
@@ -13,18 +15,17 @@ namespace Practical2
             String name, country;
            
             do{
-            Console.WriteLine("Hello,Enter your Name:");
-            name = Console.ReadLine();
+                Console.WriteLine("Hello,Enter your Name:");
+                name = Console.ReadLine();
             }while(!(Regex.IsMatch(name,"^[a-zA-Z]+$")));
-
             
             do{
-            Console.WriteLine("Where are you from :");
-            country = Console.ReadLine();
+                Console.WriteLine("Where are you from :");
+                country = Console.ReadLine();
             } while (!(Regex.IsMatch(country, "^[a-zA-Z]+$")));
 
             Console.WriteLine();
-            Console.WriteLine($"Hello {name} from {country}");
+            Console.WriteLine($"Hello {name} from country {country}");
             Console.ReadKey();
         }
     }

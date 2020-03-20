@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Practical 3: Write C# code to do the following 
+ * a. Convert binary to decimal 
+ * b. Convert decimal to hexadecimal 
+ * c. Convert decimal to binary 
+ * d. Convert decimal to octal
+ */
+using System;
 
 namespace Practical3
 {
@@ -11,23 +13,23 @@ namespace Practical3
         public static string BinaryToDecimal(string Binary)
         {
             int Decimal = 0, temp, i = 0;
-            int binaryValue = int.Parse(Binary);
-            while (binaryValue > 0)
+            int binaryno = int.Parse(Binary);
+            while (binaryno > 0)
             {
-                temp = (binaryValue % 10);
+                temp = (binaryno % 10);
                 Decimal = Decimal + (temp * (int)Math.Pow(2, i));
                 i++;
-                binaryValue = binaryValue / 10;
+                binaryno = binaryno / 10;
             }
             string Result = $"Binary : {Binary} is converted to Decimal: {Decimal}";
             return Result;
         }
 
 
-        public static string DecimalToBinary(int decimalValue)
+        public static string DecimalToBinary(int decimalNo)
         {
-            string Result = $"Decimal : {decimalValue} is converted to Binary: ";
-            int value = decimalValue; int i;
+            string Result = $"Decimal : {decimalNo} is converted to Binary: ";
+            int value = decimalNo; int i;
             int[] binaryString = new int[10];
             for (i = 0; value > 0; i++)
             {
@@ -42,10 +44,10 @@ namespace Practical3
             return Result;
         }
 
-        public static string DecimalToOctal(int decimalValue)
+        public static string DecimalToOctal(int decimalNo)
         {
-            string Result = $"Decimal : {decimalValue} is converted to Octal: ";
-            int value = decimalValue; int i;
+            string Result = $"Decimal : {decimalNo} is converted to Octal: ";
+            int value = decimalNo; int i;
             int[] octalString = new int[10];
             for (i = 0; value > 0; i++)
             {
@@ -61,10 +63,10 @@ namespace Practical3
         }
 
 
-        public static string DecimalToHexadecimal(int decimalValue)
+        public static string DecimalToHexadecimal(int decimalNo)
         { 
-            string Result = $"Decimal : {decimalValue} is converted to Hexadecimal: ";
-            int value = decimalValue; int i;
+            string Result = $"Decimal : {decimalNo} is converted to Hexadecimal: ";
+            int value = decimalNo; int i;
             int[] hexadecimalString = new int[10];
             for (i = 0; value > 0; i++)
             {

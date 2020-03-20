@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Practical 4
+ * 'Write C# code to convert infix notation to postfix notation. 
+ */
+using System;
 
 namespace Practical4
 {
@@ -15,7 +14,7 @@ namespace Practical4
             String postfix;
             myclass.Infixtopostfix(ref infix, out postfix);
             Console.WriteLine("infix string : " + infix);
-            Console.WriteLine("postfix string is : " + postfix);
+            Console.WriteLine("postfix string is : "+postfix);
             Console.Read();
         }
     }
