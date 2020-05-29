@@ -26,7 +26,7 @@ namespace Practical2
 
             Console.WriteLine();
             Console.WriteLine($"Hello {name} from country {country}");
-            Console.ReadKey();
+            Console.Read();
         }
     }
 }
